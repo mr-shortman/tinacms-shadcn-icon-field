@@ -3,6 +3,7 @@ import NavLink from "./nav-link";
 import client from "@/base/tina/__generated__/client";
 import { ModeToggle } from "../mode-toggle";
 import Link from "next/link";
+import { Icon } from "../icon";
 
 async function Navbar() {
   const data = await client.queries.settings({
@@ -12,8 +13,11 @@ async function Navbar() {
   return (
     <nav className="border-b">
       <div className="container py-4 flex items-center justify-between">
-        <Link href={"/"}>
-          <span className="text-xl font-bold">{settings.title}</span>
+        <Link href={"/"} className="flex gap-2 items-center">
+          <>
+            <Icon data={settings.icon} className="size-8" />
+            <span className="text-xl font-bold">{settings.title}</span>
+          </>
         </Link>
         <div className="flex items-center gap-4">
           <menu className="flex items-center  ">

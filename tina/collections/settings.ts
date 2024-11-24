@@ -1,4 +1,6 @@
 import { Collection } from "tinacms";
+import { iconSchema } from "../fields/icon";
+// import { iconSchema } from "../fields/icon";
 
 export default {
   label: "Site Settings",
@@ -6,6 +8,7 @@ export default {
   path: "content/settings",
   format: "json",
   fields: [
+    iconSchema,
     {
       type: "string",
       label: "Site Title",

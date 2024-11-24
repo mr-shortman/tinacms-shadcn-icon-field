@@ -1,4 +1,9 @@
 {
+  "icon": {
+    "name": "Tina",
+    "color": "primary",
+    "style": "float"
+  },
   "title": "Website",
   "navigation": [
     {
